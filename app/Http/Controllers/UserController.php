@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Contact;
+use App\Models\Index;
 use App\Models\Project;
 use App\Models\Service;
 use Illuminate\Http\Request;
@@ -12,7 +13,8 @@ class UserController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $show = Index::all();
+        return view('index', compact('show'));
     }
 
     public function about()

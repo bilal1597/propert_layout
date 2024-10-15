@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('index', function (Blueprint $table) {
+        Schema::create('indexs', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('title');
+            $table->string('title_heading');
+            $table->string('rj_para');
+            $table->string('mh_para');
+            $table->string('sadiq_para');
         });
     }
 
@@ -22,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('index');
+        Schema::dropIfExists('indexs');
     }
 };

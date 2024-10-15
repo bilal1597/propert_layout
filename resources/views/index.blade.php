@@ -27,6 +27,9 @@
     <!--navbar end-->
 
     <!--slider-->
+    @foreach ($show as $item)
+
+
     <section>
       <div>
         <h4
@@ -37,16 +40,17 @@
             background-size: cover;
             background-position: center;
           "
-        >
-          Property World
+        >                            {{--title DB--}}
+          {{$item ->title}}
           <br />
           <div class="mt-lg-2 pt-lg-1"></div>
-          <span class="text-white fs-6"
-            >Make The Right Decision at Right Time
+          <span class="text-white fs-6"  {{--title-heading DB--}}
+            >{{$item ->title_heading}}
           </span>
         </h4>
       </div>
     </section>
+    @endforeach
     <!--slider end-->
 
     <!--project 1-->
@@ -60,12 +64,9 @@
             <br />
             RJ Group Builders & Developers
           </h1>
-
+                                 {{-- rj-para DB--}}
           <p class="pt-lg-3">
-            Rj Group Builders and Developers Project “RJ HEAVEN”- Luxurious
-            Apartments. Available on Easy Payment Plans. Located at the Prime
-            Location of Allama Iqbal Road. Stay Tuned & Keep in touch with
-            Sultanpur Estate & Builders & Al-Arz Estate & Marketing.
+            {{$item ->rj_para }}
           </p>
 
           <div class="row pt-lg-0 pt-md-0 pt-3">
@@ -153,11 +154,8 @@
             M&H Builders & Developers
           </h1>
 
-          <p class="pt-lg-3">
-            The Project is located at prime location of Block 12,
-            Gulistan-e-Johar, Karachi, Pakistan. Luxury apartments with extra
-            ordinary amenities. The project is approved by CBF (Cantonment Board
-            Faisal).
+          <p class="pt-lg-3"> {{-- mh-para DB--}}
+            {{$item ->mh_para }}
           </p>
 
           <div class="row pt-lg-0 pt-md-0 pt-3">
@@ -246,9 +244,8 @@
             Al Sadiq Group
           </h1>
 
-          <p class="pt-lg-3">
-            A state-of-the-art commercial complex strategically located in the
-            heart of Karachi's vibrant SMCHS district.
+          <p class="pt-lg-3">  {{-- sadiq-para DB--}}
+            {{$item ->sadiq_para }}
           </p>
 
           <div class="row pt-lg-0 pt-md-0 pt-3">
